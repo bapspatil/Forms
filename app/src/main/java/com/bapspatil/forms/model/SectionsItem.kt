@@ -7,7 +7,7 @@ data class SectionsItem(
 
 	@SerializedName("visible_conditions")
 	@Expose
-	val visibleConditions: Any? = null,
+	val visibleConditions: ArrayList<HashMap<String, String>>? = null,
 
 	@SerializedName("hidden")
 	@Expose
@@ -15,7 +15,7 @@ data class SectionsItem(
 
 	@SerializedName("footer")
 	@Expose
-	val footer: Any? = null,
+	val footer: String? = null,
 
 	@SerializedName("rows")
 	@Expose
@@ -23,5 +23,5 @@ data class SectionsItem(
 
 	@SerializedName("title")
 	@Expose
-	val title: Any? = null
+	val title: String? = null
 )

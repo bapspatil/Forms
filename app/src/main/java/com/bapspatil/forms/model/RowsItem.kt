@@ -7,15 +7,15 @@ data class RowsItem(
 
 	@SerializedName("visible_conditions")
 	@Expose
-	val visibleConditions: Any? = null,
+	val visibleConditions: ArrayList<HashMap<String, String>>? = null,
 
 	@SerializedName("hidden")
 	@Expose
-	val hidden: Any? = null,
+	val hidden: Boolean? = null,
 
 	@SerializedName("subtitle")
 	@Expose
-	val subtitle: Any? = null,
+	val subtitle: String? = null,
 
 	@SerializedName("title")
 	@Expose
@@ -27,11 +27,11 @@ data class RowsItem(
 
 	@SerializedName("listing_attribute")
 	@Expose
-	val listingAttribute: Any? = null,
+	val listingAttribute: String? = null,
 
 	@SerializedName("value")
 	@Expose
-	val value: String? = null,
+	val value: Any? = null,
 
 	@SerializedName("key")
 	@Expose
@@ -39,5 +39,5 @@ data class RowsItem(
 
 	@SerializedName("info")
 	@Expose
-	val info: Any? = null
+	val info: String? = null
 )
