@@ -12,11 +12,11 @@ import retrofit2.http.GET
 
 interface FormJsonService {
 
-    @GET("/dynamic_form.json")
+    @GET("dynamic_form.json")
     fun getForm(): Call<FormModel>
 
     companion object {
-        val BASE_URL = "https://raw.githubusercontent.com/bapspatil/Forms/master/assets"
+        const val BASE_URL = "https://raw.githubusercontent.com/bapspatil/Forms/master/assets/"
 
         fun create(): FormJsonService {
             val retrofit = Retrofit.Builder()
