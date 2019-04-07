@@ -1,0 +1,638 @@
+{
+  "form": {
+    "entry_page": "main_page",
+    "pages": {
+      "more_filters_page": {
+        "sections": [
+          {
+            "rows": [
+              {
+                "info": null,
+                "subtitle": null,
+                "title": "Listings with photos only",
+                "type": "checkbox",
+                "value": "false",
+                "visible_conditions": null,
+                "key": "photo_only",
+                "hidden": null,
+                "listing_attribute": null
+              }
+            ],
+            "hidden": false,
+            "footer": null,
+            "visible_conditions": null,
+            "title": null
+          }
+        ],
+        "key": "more_filters_page",
+        "title": "More filters"
+      },
+      "property_type_page": {
+        "sections": [
+          {
+            "rows": [
+              {
+                "subtitle": null,
+                "key": "main_category",
+                "title": "Property Type",
+                "type": "group_selection",
+                "value": "all",
+                "visible_conditions": null,
+                "groups": [
+                  {
+                    "values": [
+                      "all"
+                    ]
+                  },
+                  {
+                    "values": [
+                      "condo",
+                      "hdb",
+                      "landed"
+                    ]
+                  }
+                ],
+                "hidden": null,
+                "options": [
+                  {
+                    "label": "All",
+                    "value": "all"
+                  },
+                  {
+                    "label": "Condominum / Apartment",
+                    "value": "condo"
+                  },
+                  {
+                    "label": "HDB",
+                    "value": "hdb"
+                  },
+                  {
+                    "label": "Landed",
+                    "value": "landed"
+                  }
+                ]
+              },
+              {
+                "subtitle": null,
+                "key": "condo_sub_type",
+                "title": "Condo: Sub Property Type",
+                "type": "group_selection",
+                "value": [
+                  "generic_condo",
+                  "walkup",
+                  "condo_apartment",
+                  "executive_condo",
+                  "service_apartment"
+                ],
+                "visible_conditions": [
+                  {
+                    "main_category": "condo"
+                  }
+                ],
+                "groups": [
+                  {
+                    "values": [
+                      "generic_condo",
+                      "walkup",
+                      "condo_apartment",
+                      "executive_condo",
+                      "service_apartment"
+                    ]
+                  }
+                ],
+                "hidden": null,
+                "options": [
+                  {
+                    "label": "Condo",
+                    "value": "generic_condo"
+                  },
+                  {
+                    "label": "Walk Up",
+                    "value": "walkup"
+                  },
+                  {
+                    "label": "Apartment",
+                    "value": "condo_apartment"
+                  },
+                  {
+                    "label": "Executive Condominium",
+                    "value": "executive_condo"
+                  },
+                  {
+                    "label": "Service Apartment",
+                    "value": "service_apartment"
+                  }
+                ]
+              },
+              {
+                "subtitle": null,
+                "key": "hdb_sub_type",
+                "title": "HDB: Sub Property Type",
+                "type": "group_selection",
+                "value": [
+                  "hdb_2r",
+                  "hdb_3r",
+                  "hdb_4r",
+                  "hdb_5r",
+                  "hdb_executive"
+                ],
+                "visible_conditions": [
+                  {
+                    "main_category": "hdb"
+                  }
+                ],
+                "groups": [
+                  {
+                    "values": [
+                      "hdb_2r",
+                      "hdb_3r",
+                      "hdb_4r",
+                      "hdb_5r",
+                      "hdb_executive"
+                    ]
+                  }
+                ],
+                "hidden": null,
+                "options": [
+                  {
+                    "label": "HDB 2 Rooms",
+                    "value": "hdb_2r"
+                  },
+                  {
+                    "label": "HDB 3 Rooms",
+                    "value": "hdb_3r"
+                  },
+                  {
+                    "label": "HDB 4 Rooms",
+                    "value": "hdb_4r"
+                  },
+                  {
+                    "label": "HDB 5 Rooms",
+                    "value": "hdb_5r"
+                  },
+                  {
+                    "label": "HDB Executive",
+                    "value": "hdb_executive"
+                  }
+                ]
+              },
+              {
+                "subtitle": null,
+                "key": "landed_sub_type",
+                "title": "Landed: Sub Property Type",
+                "type": "group_selection",
+                "value": [
+                  "terraced_house",
+                  "corner_terrace",
+                  "semi_detached",
+                  "bungalow",
+                  "goodclass_bungalow",
+                  "shophouse",
+                  "townhouse",
+                  "conservationhouse",
+                  "clusterhouse",
+                  "landonly"
+                ],
+                "visible_conditions": [
+                  {
+                    "main_category": "landed"
+                  }
+                ],
+                "groups": [
+                  {
+                    "values": [
+                      "terraced_house",
+                      "corner_terrace",
+                      "semi_detached",
+                      "bungalow",
+                      "goodclass_bungalow",
+                      "shophouse",
+                      "townhouse",
+                      "conservationhouse",
+                      "clusterhouse",
+                      "landonly"
+                    ]
+                  }
+                ],
+                "hidden": null,
+                "options": [
+                  {
+                    "label": "Terrace House",
+                    "value": "terraced_house"
+                  },
+                  {
+                    "label": "Corner Terrace",
+                    "value": "corner_terrace"
+                  },
+                  {
+                    "label": "Semi-Detached House",
+                    "value": "semi_detached"
+                  },
+                  {
+                    "label": "Bungalow / Detached House",
+                    "value": "bungalow"
+                  },
+                  {
+                    "label": "Good Class Bungalow",
+                    "value": "goodclass_bungalow"
+                  },
+                  {
+                    "label": "Shophouse",
+                    "value": "shophouse"
+                  },
+                  {
+                    "label": "Townhouse",
+                    "value": "townhouse"
+                  },
+                  {
+                    "label": "Conservation House",
+                    "value": "conservationhouse"
+                  },
+                  {
+                    "label": "Cluster House",
+                    "value": "clusterhouse"
+                  },
+                  {
+                    "label": "Land only",
+                    "value": "landonly"
+                  }
+                ]
+              }
+            ],
+            "hidden": false,
+            "footer": null,
+            "visible_conditions": null,
+            "title": null
+          }
+        ],
+        "key": "property_type_page",
+        "title": "Property Type"
+      },
+      "main_page": {
+        "sections": [
+          {
+            "rows": [
+              {
+                "subtitle": null,
+                "title": null,
+                "type": "selection",
+                "value": "sale",
+                "visible_conditions": null,
+                "key": "listing_type",
+                "hidden": false,
+                "options": [
+                  {
+                    "label": "For sale",
+                    "value": "sale"
+                  },
+                  {
+                    "label": "For rent",
+                    "value": "rent"
+                  }
+                ]
+              }
+            ],
+            "hidden": false,
+            "footer": null,
+            "visible_conditions": null,
+            "title": null
+          },
+          {
+            "rows": [
+              {
+                "subtitle": null,
+                "key": "rental_type",
+                "title": "Rental Type",
+                "type": "group_selection",
+                "value": "unit",
+                "visible_conditions": [
+                  {
+                    "listing_type": "rent"
+                  }
+                ],
+                "groups": [
+                  {
+                    "values": [
+                      "unit"
+                    ]
+                  },
+                  {
+                    "values": [
+                      "room"
+                    ]
+                  }
+                ],
+                "hidden": null,
+                "options": [
+                  {
+                    "label": "Entire Home",
+                    "value": "unit"
+                  },
+                  {
+                    "label": "Room",
+                    "value": "room"
+                  }
+                ]
+              },
+              {
+                "subtitle": null,
+                "title": "Price Range",
+                "postfix": null,
+                "type": "numeric_range",
+                "min": null,
+                "formatted": true,
+                "min_title": "Minimum Price",
+                "visible_conditions": null,
+                "prefix": "$",
+                "value": null,
+                "key": "price_range",
+                "max": null,
+                "max_title": "Maximum Price",
+                "hidden": null,
+                "listing_attribute": null
+              },
+              {
+                "subtitle": null,
+                "text_style": "normal",
+                "title": "Property Type",
+                "type": "page",
+                "value": null,
+                "text_color": "#3e4246",
+                "visible_conditions": null,
+                "key": "property_type",
+                "preview_format": [
+                  "{main_category}"
+                ],
+                "hidden": null,
+                "refer": "property_type_page"
+              },
+              {
+                "subtitle": null,
+                "key": "room_type",
+                "title": "Bedroom Type",
+                "type": "group_selection",
+                "value": [
+                  "common",
+                  "master"
+                ],
+                "visible_conditions": [
+                  {
+                    "listing_type": "rent",
+                    "rental_type": "room"
+                  }
+                ],
+                "groups": [
+                  {
+                    "values": [
+                      "common",
+                      "master"
+                    ]
+                  }
+                ],
+                "hidden": false,
+                "options": [
+                  {
+                    "label": "Common Room",
+                    "value": "common"
+                  },
+                  {
+                    "label": "Master Room",
+                    "value": "master"
+                  }
+                ]
+              },
+              {
+                "subtitle": null,
+                "key": "rooms",
+                "title": "Bedrooms",
+                "type": "group_selection",
+                "value": "any",
+                "visible_conditions": [
+                  {
+                    "rental_type": "unit"
+                  },
+                  {
+                    "listing_type": "sale"
+                  }
+                ],
+                "groups": [
+                  {
+                    "values": [
+                      "any"
+                    ]
+                  },
+                  {
+                    "values": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5
+                    ]
+                  }
+                ],
+                "hidden": null,
+                "options": [
+                  {
+                    "label": "Any",
+                    "value": "any"
+                  },
+                  {
+                    "label": "Studio",
+                    "value": 0
+                  },
+                  {
+                    "label": "1",
+                    "value": 1
+                  },
+                  {
+                    "label": "2",
+                    "value": 2
+                  },
+                  {
+                    "label": "3",
+                    "value": 3
+                  },
+                  {
+                    "label": "4",
+                    "value": 4
+                  },
+                  {
+                    "label": "5+",
+                    "value": 5
+                  }
+                ]
+              },
+              {
+                "subtitle": null,
+                "title": "Floor Area",
+                "postfix": " sqft",
+                "type": "numeric_range",
+                "min": 10,
+                "formatted": true,
+                "min_title": "Minimum Floor Area",
+                "visible_conditions": null,
+                "prefix": null,
+                "value": null,
+                "key": "floor_area_range",
+                "max": 10000,
+                "max_title": "Maximum Floor Area",
+                "hidden": null,
+                "listing_attribute": null
+              },
+              {
+                "subtitle": null,
+                "title": "Land Area",
+                "postfix": " sqft",
+                "type": "numeric_range",
+                "min": 10,
+                "formatted": true,
+                "min_title": "Minimum Floor Area",
+                "visible_conditions": [
+                  {
+                    "main_category": "landed"
+                  }
+                ],
+                "prefix": null,
+                "value": null,
+                "key": "land_size_range",
+                "max": 100000,
+                "max_title": "Maximum Floor Area",
+                "hidden": null,
+                "listing_attribute": null
+              },
+              {
+                "subtitle": null,
+                "title": "Year of Completion (TOP)",
+                "postfix": null,
+                "type": "numeric_range",
+                "min": 1950,
+                "formatted": false,
+                "min_title": "Start of Year",
+                "visible_conditions": null,
+                "prefix": null,
+                "value": null,
+                "key": "year_of_completion_range",
+                "max": 2020,
+                "max_title": "End of Year",
+                "hidden": null,
+                "listing_attribute": null
+              },
+              {
+                "subtitle": null,
+                "title": "Number of units in Project",
+                "postfix": "",
+                "type": "numeric_range",
+                "min": 10,
+                "formatted": true,
+                "min_title": "Minimum Units",
+                "visible_conditions": null,
+                "prefix": null,
+                "value": null,
+                "key": "cluster_number_of_units_range",
+                "max": 500,
+                "max_title": "Maximum Units",
+                "hidden": null,
+                "listing_attribute": null
+              },
+              {
+                "subtitle": null,
+                "key": "tenure",
+                "title": "Tenure",
+                "type": "group_selection",
+                "value": null,
+                "visible_conditions": [
+                  {
+                    "listing_type": "sale",
+                    "main_category": "condo"
+                  },
+                  {
+                    "listing_type": "sale",
+                    "main_category": "landed"
+                  },
+                  {
+                    "listing_type": "sale",
+                    "main_category": "all"
+                  }
+                ],
+                "groups": [
+                  {
+                    "values": [
+                      "99_103",
+                      "freehold",
+                      "999"
+                    ]
+                  },
+                  {
+                    "values": [
+                      "any"
+                    ]
+                  }
+                ],
+                "hidden": null,
+                "options": [
+                  {
+                    "label": "Any",
+                    "value": "any"
+                  },
+                  {
+                    "label": "99-103 years",
+                    "value": "99_103"
+                  },
+                  {
+                    "label": "999 years",
+                    "value": "999"
+                  },
+                  {
+                    "label": "Freehold",
+                    "value": "freehold"
+                  }
+                ]
+              },
+              {
+                "subtitle": null,
+                "title": "Keywords",
+                "type": "text",
+                "placeholder": "Keywords separated by commas. For example: \"Gym, high floor...\"",
+                "value": null,
+                "visible_conditions": null,
+                "multiple_line": true,
+                "key": "keywords",
+                "hidden": null,
+                "listing_attribute": null
+              }
+            ],
+            "hidden": false,
+            "footer": null,
+            "visible_conditions": null,
+            "title": null
+          },
+          {
+            "rows": [
+              {
+                "subtitle": null,
+                "text_style": "bold",
+                "title": "More filters",
+                "type": "page",
+                "value": null,
+                "text_color": "#3893D9",
+                "visible_conditions": null,
+                "key": "more_filters",
+                "preview_format": [],
+                "hidden": null,
+                "refer": "more_filters_page"
+              }
+            ],
+            "hidden": false,
+            "footer": null,
+            "visible_conditions": null,
+            "title": null
+          }
+        ],
+        "key": "main_page",
+        "title": "Filter"
+      }
+    }
+  }
+}
