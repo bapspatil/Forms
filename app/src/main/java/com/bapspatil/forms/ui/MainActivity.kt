@@ -1,7 +1,8 @@
-package com.bapspatil.forms
+package com.bapspatil.forms.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.bapspatil.forms.R
 
 class MainActivity : AppCompatActivity() {
 
