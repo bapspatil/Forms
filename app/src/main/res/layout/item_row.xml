@@ -3,11 +3,37 @@
     Created by Bapusaheb Patil {@link https://bapspatil.com}
 -->
 <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools"
         android:id="@+id/rowLinearLayoutContainer"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:animateLayoutChanges="true">
 
+    <TextView
+            android:id="@+id/tvRowTitle"
+            style="@style/TextAppearance.AppCompat.Subhead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAllCaps="true"
+            android:fontFamily="@font/karla_bold"
+            tools:text="Row Title"/>
+
+    <TextView
+            android:id="@+id/tvRowSubtitle"
+            style="@style/TextAppearance.AppCompat.Subhead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#4a4a4a"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/karla_regular"
+            tools:text="Row Subtitle"/>
+    <TextView
+            android:id="@+id/tvRowInfo"
+            style="@style/TextAppearance.AppCompat.Subhead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/karla_bold"
+            tools:text="Row Info"/>
 </LinearLayout>

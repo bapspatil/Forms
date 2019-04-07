@@ -19,7 +19,7 @@ data class SectionsItem(
 
 	@SerializedName("rows")
 	@Expose
-	val rows: List<RowsItem?>? = null,
+	val rows: ArrayList<RowsItem?>? = null,
 
 	@SerializedName("title")
 	@Expose

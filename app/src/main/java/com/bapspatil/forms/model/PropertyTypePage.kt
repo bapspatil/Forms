@@ -11,7 +11,7 @@ data class PropertyTypePage(
 
 	@SerializedName("sections")
 	@Expose
-	val sections: List<SectionsItem?>? = null,
+	val sections: ArrayList<SectionsItem?>? = null,
 
 	@SerializedName("key")
 	@Expose

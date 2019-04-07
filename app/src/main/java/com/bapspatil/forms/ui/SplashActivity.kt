@@ -5,9 +5,9 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.bapspatil.forms.FormsApp
 import com.bapspatil.forms.R
 import com.bapspatil.forms.model.FormModel
-import com.bapspatil.forms.network.FormJsonService
 import com.bapspatil.forms.util.FormConstants
 import retrofit2.Call
 import retrofit2.Callback
@@ -15,13 +15,11 @@ import retrofit2.Response
 
 class SplashActivity : AppCompatActivity() {
 
-    private val formJsonService: FormJsonService = FormJsonService.create()
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
 
-        val call = formJsonService.getForm()
+        val call = FormsApp.formJsonService.getForm()
         call.enqueue(object : Callback<FormModel> {
             override fun onFailure(call: Call<FormModel>, t: Throwable) {
                 Toast.makeText(this@SplashActivity, "Error fetching details!", Toast.LENGTH_LONG).show()
