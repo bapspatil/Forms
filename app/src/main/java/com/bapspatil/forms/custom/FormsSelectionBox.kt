@@ -85,9 +85,12 @@ class FormsSelectionBox : LinearLayout, View.OnClickListener {
         }
     }
 
-    fun setSelectionBoxListener(selectionBoxListener: SelectionBoxListener): FormsSelectionBox {
-        this.listener = selectionBoxListener
-        return this
+    inline fun setSelectionBoxListener(crossinline onOptionSelected: (option: Int) -> Unit) {
+        object : SelectionBoxListener {
+            override fun onOptionSelected(option: Int) {
+                onOptionSelected(option)
+            }
+        }
     }
 
     interface SelectionBoxListener {
