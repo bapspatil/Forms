@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Created by Bapusaheb Patil {@link https://bapspatil.com}
+-->
+<resources>
+    <declare-styleable name="FormsSelectionBox">
+        <attr name="fsb_defaultOption">
+            <enum name="forSale" value="0" />
+            <enum name="forRent" value="1" />
+        </attr>
+    </declare-styleable>
+</resources>

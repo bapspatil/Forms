@@ -31,7 +31,7 @@ class SplashActivity : AppCompatActivity() {
                     val entryPage = response.body()?.form?.entryPage
                     when (entryPage) {
                         FormConstants.MAIN_PAGE -> {
-                            startActivity(Intent(this@SplashActivity, MainActivity::class.java))
+                            startActivity(Intent(this@SplashActivity, FormMainActivity::class.java))
                         }
                         FormConstants.MORE_FILTERS_PAGE -> {
                             startActivity(Intent(this@SplashActivity, MoreFiltersActivity::class.java))

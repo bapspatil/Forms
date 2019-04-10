@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Created by Bapusaheb Patil {@link https://bapspatil.com}
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:orientation="horizontal"
+              android:paddingTop="12dp"
+              android:paddingBottom="12dp"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content">
+        <ImageView
+                android:layout_width="wrap_content"
+                android:id="@+id/imgFsbForSale"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_check_24dp"
+                android:layout_centerVertical="true"
+                app:layout_constraintRight_toLeftOf="@id/tvFsbForSale"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_alignStart="@id/tvFsbForSale"/>
+        <TextView
+                android:id="@+id/tvFsbForSale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/for_sale"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:textSize="22sp"
+                tools:textColor="@color/md_green_700"
+                android:fontFamily="@font/karla_bold"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/md_blue_grey_300"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content">
+        <ImageView
+                android:layout_width="wrap_content"
+                android:id="@+id/imgFsbForRent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_check_24dp"
+                android:layout_centerVertical="true"
+                app:layout_constraintRight_toLeftOf="@id/tvFsbForRent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginEnd="8dp"
+                tools:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_alignStart="@id/tvFsbForRent"/>
+        <TextView
+                android:id="@+id/tvFsbForRent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:gravity="center"
+                android:text="@string/for_rent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_centerInParent="true"
+                android:textSize="22sp"
+                tools:textColor="@color/md_grey_800"
+                android:fontFamily="@font/karla_bold"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
