@@ -24,6 +24,17 @@
             app:layout_constraintLeft_toLeftOf="parent"/>
 
     <TextView
+            android:id="@+id/fnrbSubtitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:layout_marginStart="8dp"
+            android:textColor="@color/md_grey_800"
+            tools:text="Subtitle for price range"
+            app:layout_constraintTop_toBottomOf="@id/fnrbTitleTextView"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <TextView
             android:id="@+id/fnrbMinMaxTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -33,10 +44,48 @@
             android:drawableEnd="@drawable/ic_keyboard_arrow_down_grey_400_24dp"
             android:layout_marginEnd="8dp"
             android:drawablePadding="4dp"
-            tools:text="Any - Any"
+            android:text="@string/any_any"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintRight_toRightOf="parent"/>
 
-    <!--TODO: Add layout for selecting numeric range here-->
+    <LinearLayout
+            android:id="@+id/fnrbNumericRangeLayout"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:visibility="gone"
+            tools:visibility="visible"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/fnrbTitleTextView"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+
+        <TextView
+                android:id="@+id/fnrbMinTitleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                tools:text="Minimum Price"
+                android:textSize="20sp"/>
+        <EditText
+                android:id="@+id/fnrbMinEditText"
+                android:layout_width="match_parent"
+                android:inputType="number"
+                android:layout_height="match_parent"/>
+        <TextView
+                android:id="@+id/fnrbMaxTitleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                tools:text="Maximum Price"
+                android:textSize="20sp"/>
+        <EditText
+                android:id="@+id/fnrbMaxEditText"
+                android:layout_width="match_parent"
+                android:inputType="number"
+                android:layout_height="match_parent"/>
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

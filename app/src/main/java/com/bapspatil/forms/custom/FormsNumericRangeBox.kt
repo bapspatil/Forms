@@ -4,9 +4,8 @@ import android.content.Context
 import android.util.AttributeSet
 import android.view.View
 import android.widget.LinearLayout
-import androidx.core.content.ContextCompat
 import com.bapspatil.forms.R
-import kotlinx.android.synthetic.main.forms_selection_box.view.*
+import kotlinx.android.synthetic.main.forms_numeric_range_box.view.*
 
 /*
 ** Created by Bapusaheb Patil {@link https://bapspatil.com}
@@ -14,8 +13,16 @@ import kotlinx.android.synthetic.main.forms_selection_box.view.*
 
 class FormsNumericRangeBox : LinearLayout, View.OnClickListener {
 
-    var optionSelected: Int? = FOR_SALE
-    private var listener: FormsSelectionBox.SelectionBoxListener? = null
+    var postfix: String? = null
+    var prefix: String? = null
+    var maxValue: Int? = null
+    var minValue: Int? = null
+    var maxTitle: String? = null
+    var minTitle: String? = null
+    var title: String? = null
+    var subtitle: String? = null
+
+    private var listener: FormsNumericRangeBox.SelectionBoxListener? = null
 
     constructor(ctx: Context?) : super(ctx) {
         initView(ctx, null, 0)
@@ -31,80 +38,73 @@ class FormsNumericRangeBox : LinearLayout, View.OnClickListener {
 
     private fun initView(ctx: Context?, attrs: AttributeSet?, defStyle: Int) {
         View.inflate(ctx, R.layout.forms_numeric_range_box, this)
-        tvFsbForSale.setOnClickListener(this)
-        tvFsbForRent.setOnClickListener(this)
+        fnrbMinMaxTextView.setOnClickListener(this)
         if (attrs != null) {
             val attributes = context.theme.obtainStyledAttributes(attrs, R.styleable.FormsSelectionBox, defStyle, 0)
-            optionSelected = attributes.getInt(R.styleable.FormsSelectionBox_fsb_defaultOption, FOR_SALE)
+            postfix = attributes.getString(R.styleable.FormsNumericRangeBox_fnrb_postfix)
+            prefix = attributes.getString(R.styleable.FormsNumericRangeBox_fnrb_prefix)
+            maxValue = attributes.getInt(R.styleable.FormsNumericRangeBox_fnrb_maxValue, -1)
+            minValue = attributes.getInt(R.styleable.FormsNumericRangeBox_fnrb_minValue, -1)
+            maxTitle = attributes.getString(R.styleable.FormsNumericRangeBox_fnrb_maxTitle)
+            minTitle = attributes.getString(R.styleable.FormsNumericRangeBox_fnrb_minTitle)
+            title = attributes.getString(R.styleable.FormsNumericRangeBox_fnrb_title)
+            subtitle = attributes.getString(R.styleable.FormsNumericRangeBox_fnrb_subtitle)
             attributes.recycle()
         }
         updateUI(ctx)
     }
 
     private fun updateUI(ctx: Context?) {
-        when (optionSelected) {
-            FOR_SALE -> {
-                tvFsbForRent.setTextColor(ContextCompat.getColor(ctx!!, R.color.md_grey_800))
-                imgFsbForRent.visibility = View.GONE
+        if (title != null)
+            fnrbTitleTextView.text = title
+        if (subtitle != null)
+            fnrbSubtitleTextView.text = subtitle
 
-                tvFsbForSale.setTextColor(ContextCompat.getColor(ctx, R.color.md_green_700))
-                imgFsbForSale.visibility = View.VISIBLE
+        if (maxTitle != null)
+            fnrbMaxTitleTextView.text = maxTitle
+        if (minTitle != null)
+            fnrbMinTitleTextView.text = minTitle
+
+        var maxString = "Any"
+        if (maxValue != -1) {
+            if (postfix != null) {
+                maxString = "$maxValue$postfix"
             }
-            FOR_RENT -> {
-                tvFsbForSale.setTextColor(ContextCompat.getColor(ctx!!, R.color.md_grey_800))
-                imgFsbForSale.visibility = View.GONE
-
-                tvFsbForRent.setTextColor(ContextCompat.getColor(ctx, R.color.md_green_700))
-                imgFsbForRent.visibility = View.VISIBLE
+            if (prefix != null) {
+                maxString = "$prefix$maxValue"
             }
         }
+        var minString = "Any"
+        if (minValue != -1) {
+            if (postfix != null) {
+                minString = "$minValue$postfix"
+            }
+            if (prefix != null) {
+                minString = "$prefix$minValue"
+            }
+        }
+        fnrbMinMaxTextView.text = "$minString - $maxString"
     }
 
     override fun onClick(v: View?) {
-        when (v?.id) {
-            R.id.tvFsbForSale -> {
-                tvFsbForRent.setTextColor(ContextCompat.getColor(v.context, R.color.md_grey_800))
-                imgFsbForRent.visibility = View.GONE
 
-                tvFsbForSale.setTextColor(ContextCompat.getColor(v.context, R.color.md_green_700))
-                imgFsbForSale.visibility = View.VISIBLE
-
-                optionSelected = FOR_SALE
-                listener?.onOptionSelected(FOR_SALE)
-            }
-            R.id.tvFsbForRent -> {
-                tvFsbForSale.setTextColor(ContextCompat.getColor(v.context, R.color.md_grey_800))
-                imgFsbForSale.visibility = View.GONE
-
-                tvFsbForRent.setTextColor(ContextCompat.getColor(v.context, R.color.md_green_700))
-                imgFsbForRent.visibility = View.VISIBLE
-
-                optionSelected = FOR_RENT
-                listener?.onOptionSelected(FOR_RENT)
-            }
-        }
     }
 
-    fun setSelectionBoxListener(selectionBoxListener: SelectionBoxListener): FormsSelectionBox {
+    fun setSelectionBoxListener(selectionBoxListener: SelectionBoxListener): FormsNumericRangeBox {
         listener = selectionBoxListener
         return this
     }
 
-    inline fun setSelectionBoxListener(crossinline onOptionSelected: (option: Int) -> Unit): FormsSelectionBox {
+    inline fun setSelectionBoxListener(crossinline onOptionSelected: (option: Int) -> Unit): FormsNumericRangeBox {
         object : SelectionBoxListener {
             override fun onOptionSelected(option: Int) {
                 onOptionSelected(option)
             }
         }
-        return this@FormsSelectionBox
+        return this@FormsNumericRangeBox
     }
 
     interface SelectionBoxListener {
         fun onOptionSelected(option: Int)
-    }
-
-    companion object {
-        const val FOR_SALE = 0
-        const val FOR_RENT = 1
     }
 }
