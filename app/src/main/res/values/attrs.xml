@@ -11,4 +11,14 @@
     </declare-styleable>
     <declare-styleable name="FormsGroupSelectionBox">
     </declare-styleable>
+    <declare-styleable name="FormsNumericRangeBox">
+        <attr name="fnrb_postfix" format="string" />
+        <attr name="fnrb_prefix" format="string" />
+        <attr name="fnrb_maxValue" format="integer" />
+        <attr name="fnrb_minValue" format="integer" />
+        <attr name="fnrb_maxTitle" format="string" />
+        <attr name="fnrb_minTitle" format="string" />
+        <attr name="fnrb_title" format="string" />
+        <attr name="fnrb_subtitle" format="string" />
+    </declare-styleable>
 </resources>
