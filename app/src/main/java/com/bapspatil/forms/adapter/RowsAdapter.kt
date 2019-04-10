@@ -29,10 +29,10 @@ class RowsAdapter(private val rows: ArrayList<RowsItem?>?) : RecyclerView.Adapte
 
         var visibilityFlag = false
 
-        if (row?.hidden != null && row.hidden) {
+        if (row?.hidden != null && row.hidden!!) {
             visibilityFlag = false
-        } else if (row?.visibleConditions != null && row.visibleConditions.isNotEmpty()) {
-            row.visibleConditions.forEach { visibleCondition ->
+        } else if (row?.visibleConditions != null && row.visibleConditions!!.isNotEmpty()) {
+            row.visibleConditions!!.forEach { visibleCondition ->
                 for (key in visibleCondition.keys) {
                     rows?.forEach { mRow ->
                         visibilityFlag = mRow?.key?.equals(key)!! && mRow.value?.equals(visibleCondition[key])!!

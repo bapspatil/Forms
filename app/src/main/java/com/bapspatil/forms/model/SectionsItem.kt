@@ -7,21 +7,21 @@ data class SectionsItem(
 
 	@SerializedName("visible_conditions")
 	@Expose
-	val visibleConditions: ArrayList<HashMap<String, String>>? = null,
+	var visibleConditions: ArrayList<HashMap<String, String>>? = null,
 
 	@SerializedName("hidden")
 	@Expose
-	val hidden: Boolean? = null,
+	var hidden: Boolean? = null,
 
 	@SerializedName("footer")
 	@Expose
-	val footer: String? = null,
+	var footer: String? = null,
 
 	@SerializedName("rows")
 	@Expose
-	val rows: ArrayList<RowsItem?>? = null,
+	var rows: ArrayList<RowsItem?>? = null,
 
 	@SerializedName("title")
 	@Expose
-	val title: String? = null
+	var title: String? = null
 )

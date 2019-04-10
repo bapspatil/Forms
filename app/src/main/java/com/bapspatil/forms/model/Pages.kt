@@ -7,13 +7,13 @@ data class Pages(
 
 	@SerializedName("property_type_page")
 	@Expose
-	val propertyTypePage: PropertyTypePage? = null,
+	var propertyTypePage: PropertyTypePage? = null,
 
 	@SerializedName("main_page")
 	@Expose
-	val mainPage: MainPage? = null,
+	var mainPage: MainPage? = null,
 
 	@SerializedName("more_filters_page")
 	@Expose
-	val moreFiltersPage: MoreFiltersPage? = null
+	var moreFiltersPage: MoreFiltersPage? = null
 )

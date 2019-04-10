@@ -7,13 +7,13 @@ data class MoreFiltersPage(
 
 	@SerializedName("title")
 	@Expose
-	val title: String? = null,
+	var title: String? = null,
 
 	@SerializedName("sections")
 	@Expose
-	val sections: ArrayList<SectionsItem?>? = null,
+	var sections: ArrayList<SectionsItem?>? = null,
 
 	@SerializedName("key")
 	@Expose
-	val key: String? = null
+	var key: String? = null
 )

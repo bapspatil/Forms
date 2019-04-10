@@ -7,5 +7,5 @@ data class FormModel(
 
 	@SerializedName("form")
 	@Expose
-	val form: Form? = null
+	var form: Form? = null
 )

@@ -7,9 +7,9 @@ data class Form(
 
 	@SerializedName("pages")
     @Expose
-	val pages: Pages? = null,
+	var pages: Pages? = null,
 
 	@SerializedName("entry_page")
     @Expose
-	val entryPage: String? = null
+	var entryPage: String? = null
 )

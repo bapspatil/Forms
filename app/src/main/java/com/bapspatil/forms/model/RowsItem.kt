@@ -7,37 +7,37 @@ data class RowsItem(
 
 	@SerializedName("visible_conditions")
 	@Expose
-	val visibleConditions: ArrayList<HashMap<String, String>>? = null,
+	var visibleConditions: ArrayList<HashMap<String, String>>? = null,
 
 	@SerializedName("hidden")
 	@Expose
-	val hidden: Boolean? = null,
+	var hidden: Boolean? = null,
 
 	@SerializedName("subtitle")
 	@Expose
-	val subtitle: String? = null,
+	var subtitle: String? = null,
 
 	@SerializedName("title")
 	@Expose
-	val title: String? = null,
+	var title: String? = null,
 
 	@SerializedName("type")
 	@Expose
-	val type: String? = null,
+	var type: String? = null,
 
 	@SerializedName("listing_attribute")
 	@Expose
-	val listingAttribute: String? = null,
+	var listingAttribute: String? = null,
 
 	@SerializedName("value")
 	@Expose
-	val value: Any? = null,
+	var value: Any? = null,
 
 	@SerializedName("key")
 	@Expose
-	val key: String? = null,
+	var key: String? = null,
 
 	@SerializedName("info")
 	@Expose
-	val info: String? = null
+	var info: String? = null
 )

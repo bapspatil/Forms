@@ -7,9 +7,9 @@ data class VisibleConditionsItem(
 
 	@SerializedName("listing_type")
 	@Expose
-	val listingType: String? = null,
+	var listingType: String? = null,
 
 	@SerializedName("main_category")
 	@Expose
-	val mainCategory: String? = null
+	var mainCategory: String? = null
 )

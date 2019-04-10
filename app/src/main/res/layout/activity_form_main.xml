@@ -5,6 +5,8 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:animateLayoutChanges="true"
         tools:context=".ui.FormMainActivity">
 
     <com.bapspatil.forms.custom.FormsSelectionBox
@@ -12,4 +14,31 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:fsb_defaultOption="forSale"/>
+
+    <View android:layout_width="match_parent" android:layout_height="2dp"/>
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:orientation="vertical"
+                  android:layout_marginStart="16dp"
+                  android:animateLayoutChanges="true"
+                  android:layout_height="wrap_content">
+        <TextView
+                android:id="@+id/rentalTypeTitleTextView"
+                style="@style/TextAppearance.AppCompat.Subhead"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:visibility="gone"
+                tools:visibility="visible"
+                android:fontFamily="@font/karla_bold"
+                android:text="Rental Type"/>
+
+        <com.bapspatil.forms.custom.FormsGroupSelectionBox
+                android:id="@+id/rentalTypeGroupSelectionBox"
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                tools:visibility="visible"/>
+    </LinearLayout>
 </LinearLayout>

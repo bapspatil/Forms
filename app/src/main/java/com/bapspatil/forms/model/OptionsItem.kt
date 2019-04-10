@@ -7,9 +7,9 @@ data class OptionsItem(
 
 	@SerializedName("label")
 	@Expose
-	val label: String? = null,
+	var label: String? = null,
 
 	@SerializedName("value")
 	@Expose
-	val value: String? = null
+	var value: String? = null
 )

@@ -4,9 +4,11 @@
 -->
 <resources>
     <declare-styleable name="FormsSelectionBox">
-        <attr name="fsb_defaultOption">
+        <attr name="fsb_defaultOption" format="integer">
             <enum name="forSale" value="0" />
             <enum name="forRent" value="1" />
         </attr>
+    </declare-styleable>
+    <declare-styleable name="FormsGroupSelectionBox">
     </declare-styleable>
 </resources>

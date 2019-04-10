@@ -7,5 +7,5 @@ data class GroupsItem(
 
 	@SerializedName("values")
 	@Expose
-	val values: ArrayList<String?>? = null
+	var values: ArrayList<String?>? = null
 )

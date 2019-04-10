@@ -28,7 +28,7 @@ class SectionsAdapter(private val sections: ArrayList<SectionsItem?>?) : Recycle
     override fun onBindViewHolder(viewHolder: SectionViewHolder, position: Int) {
         val section = sections?.get(position)
         // Hide the section
-        if (section?.hidden != null && section.hidden) {
+        if (section?.hidden != null && section.hidden!!) {
             viewHolder.itemView.visibility = View.GONE
         }
         // Show the section

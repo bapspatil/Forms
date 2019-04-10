@@ -31,8 +31,8 @@ class FormsSelectionBox : LinearLayout, View.OnClickListener {
 
     private fun initView(ctx: Context?, attrs: AttributeSet?, defStyle: Int) {
         View.inflate(ctx, R.layout.forms_selection_box, this)
-        this.tvFsbForSale.setOnClickListener(this)
-        this.tvFsbForRent.setOnClickListener(this)
+        tvFsbForSale.setOnClickListener(this)
+        tvFsbForRent.setOnClickListener(this)
         if (attrs != null) {
             val attributes = context.theme.obtainStyledAttributes(attrs, R.styleable.FormsSelectionBox, defStyle, 0)
             optionSelected = attributes.getInt(R.styleable.FormsSelectionBox_fsb_defaultOption, FOR_SALE)
@@ -85,12 +85,18 @@ class FormsSelectionBox : LinearLayout, View.OnClickListener {
         }
     }
 
-    inline fun setSelectionBoxListener(crossinline onOptionSelected: (option: Int) -> Unit) {
+    fun setSelectionBoxListener(selectionBoxListener: SelectionBoxListener): FormsSelectionBox {
+        listener = selectionBoxListener
+        return this
+    }
+
+    inline fun setSelectionBoxListener(crossinline onOptionSelected: (option: Int) -> Unit): FormsSelectionBox {
         object : SelectionBoxListener {
             override fun onOptionSelected(option: Int) {
                 onOptionSelected(option)
             }
         }
+        return this@FormsSelectionBox
     }
 
     interface SelectionBoxListener {
