@@ -48,5 +48,22 @@
                 android:layout_height="1dp"
                 android:layout_marginTop="4dp"
                 android:background="@color/md_grey_200"/>
+
+        <com.bapspatil.forms.custom.FormsNumericRangeBox
+                android:id="@+id/priceRangeNumericRange"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:fnrb_title="Price Range"
+                app:fnrb_maxTitle="Maximum Price"
+                app:fnrb_minTitle="Minimum Price"
+                app:fnrb_prefix="$" />
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="4dp"
+                android:background="@color/md_grey_200"/>
+
+
     </LinearLayout>
 </LinearLayout>

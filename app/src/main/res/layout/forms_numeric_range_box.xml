@@ -19,7 +19,6 @@
             android:layout_marginStart="8dp"
             android:textColor="@color/md_grey_800"
             tools:text="Price range"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"/>
 
@@ -46,7 +45,6 @@
             android:drawablePadding="4dp"
             android:text="@string/any_any"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintRight_toRightOf="parent"/>
 
     <LinearLayout
@@ -74,6 +72,7 @@
                 android:id="@+id/fnrbMinEditText"
                 android:layout_width="match_parent"
                 android:inputType="number"
+                android:hint="Type here..."
                 android:layout_height="match_parent"/>
         <TextView
                 android:id="@+id/fnrbMaxTitleTextView"
@@ -85,6 +84,7 @@
         <EditText
                 android:id="@+id/fnrbMaxEditText"
                 android:layout_width="match_parent"
+                android:hint="Type here..."
                 android:inputType="number"
                 android:layout_height="match_parent"/>
     </LinearLayout>
